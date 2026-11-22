@@ -15,5 +15,5 @@ jobs:
    - name: checkout repository
      uses: actions/checkout@v7.0.1
    - name: name list repository file
-     run: ls-la
+     run: ls -la
      
