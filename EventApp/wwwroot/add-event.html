@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <title>Add an event | Gather</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/add-event.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/add-event.html" aria-label="Gather home"><span class="brand-mark">g.</span> gather</a>
+    <nav aria-label="Main navigation">
+      <a class="nav-link active" href="/add-event.html">Create event</a>
+      <a class="nav-link" href="/events.html">Event list</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro">
+      <p class="eyebrow">MAKE IT HAPPEN</p>
+      <h1>Bring people<br>together.</h1>
+      <p class="intro-copy">A good gathering starts with a few details. Add yours and we’ll put it on the calendar.</p>
+      <div class="intro-note"><span class="note-icon" aria-hidden="true">✳</span><span>Make room for something memorable.</span></div>
+    </section>
+
+    <section class="form-card" aria-labelledby="form-title">
+      <div class="card-heading">
+        <div>
+          <p class="eyebrow">NEW GATHERING</p>
+          <h2 id="form-title">Event details</h2>
+        </div>
+        <span class="step-badge">01 <span>/ 01</span></span>
+      </div>
+
+      <form id="event-form">
+        <label class="field">
+          <span>Event name <span class="required">*</span></span>
+          <input name="title" type="text" maxlength="120" placeholder="e.g. Summer rooftop dinner" required>
+        </label>
+
+        <label class="field">
+          <span>Location <span class="required">*</span></span>
+          <input name="location" type="text" maxlength="200" placeholder="Add an address or venue" required>
+        </label>
+
+        <div class="field-row">
+          <label class="field">
+            <span>Starts <span class="required">*</span></span>
+            <input name="startsAt" type="datetime-local" required>
+          </label>
+          <label class="field">
+            <span>Ends <span class="required">*</span></span>
+            <input name="endsAt" type="datetime-local" required>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Description <span class="optional">OPTIONAL</span></span>
+          <textarea name="description" rows="3" maxlength="1000" placeholder="What should guests know?"></textarea>
+        </label>
+
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        <button class="button button-primary" type="submit">Save event <span aria-hidden="true">↗</span></button>
+        <p class="form-footnote">Your event will appear in the event list once saved.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>Gather well.</span><span>One event at a time.</span></footer>
+</body>
+</html>
